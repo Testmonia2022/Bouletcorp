@@ -17,6 +17,11 @@ private ConfigFileReader configFileReader;
 	public static WebElement btnAbout;
 	@FindBy(how = How.XPATH, using = "//img[@src='/buttons/insta.png']")
 	public static WebElement btnInstagram;
+	@FindBy(how = How.XPATH, using = "//img[@src='/buttons/twitch.png']")
+	public static WebElement btnTwitch;
+	@FindBy(how = How.XPATH, using = "//img[@src='/buttons/masto.png']")
+	public static WebElement btnMasto;
+	
 	
 	public BouletcorpPage() {
 		PageFactory.initElements(Setup.driver, this);

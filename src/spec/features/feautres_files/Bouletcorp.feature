@@ -6,4 +6,4 @@ Feature: Je souhaite tester le bouton a propos
     Given Je me connect sur l application Bouletcorp
     When Je clique sur le bouton a propos
     Then Je verifie que la page a change "https://bouletcorp.com/about"
-    And Le widget instagram est bien affiche
+    And Les widgets twitch masto insta sont bien affiches

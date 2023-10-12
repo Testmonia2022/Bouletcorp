@@ -17,31 +17,29 @@ public class BouletcorpStepDefinition {
 		this.bouletcorpPage = new BouletcorpPage();
 	}
 
-
 	@Given("Je me connect sur l application Bouletcorp")
 	public void jeMeConnectSurLApplicationBouletcorp() {
 		bouletcorpPage.goToUrl();
 	}
+
 	@When("Je clique sur le bouton a propos")
 	public void jeCliqueSurLeBoutonAPropos() {
 		bouletcorpPage.clickToBtnAbout();
 	}
+
 	@Then("Je verifie que la page a change {string}")
 	public void jeVerifieQueLaPageAChange(String urlApropos) {
-	    String currentUrl = Setup.driver.getCurrentUrl();
-	    Assert.assertEquals(urlApropos, currentUrl);
+		String currentUrl = Setup.driver.getCurrentUrl();
+		Assert.assertEquals(urlApropos, currentUrl);
 	}
-	@Then("Le widget instagram est bien affiche")
-	public void leWidgetInstagramEstBienAffiche() {
-		//BouletcorpPage.btnInstagram.isDisplayed();
+
+	@Then("Les widgets twitch masto insta sont bien affiches")
+	public void lesWidgetsTwitchMastoInstaSontBienAffiches() {
+		// BouletcorpPage.btnInstagram.isDisplayed();
 		Assertions.assertTrue(BouletcorpPage.btnInstagram.isDisplayed());
-		
+		Assertions.assertTrue(BouletcorpPage.btnMasto.isDisplayed());
+		Assertions.assertTrue(BouletcorpPage.btnTwitch.isDisplayed());
+
 	}
 
-
-	
-	}
-
-
-
-
+}
